@@ -1,0 +1,1 @@
+[...document.getElementsByClassName("collapsible")].forEach((l=>{const e=[...l.children];l.onclick=()=>{e.forEach((l=>{l.classList.toggle("d-none"),l.classList.toggle("d-inline")}))},e[e.length-1].children[0].classList.add("d-inline")}));
