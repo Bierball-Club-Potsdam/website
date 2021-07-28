@@ -6,7 +6,9 @@ const config = require('./config.json');
 
 module.exports = function (env) {
     return {
-        entry: {},
+        entry: {
+            collapsible: "./source/js/collapsible.js"
+        },
         plugins: [
             new HtmlWebpackPlugin({
                 filename: 'index.html',
