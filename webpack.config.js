@@ -28,6 +28,13 @@ module.exports = function (env) {
                         { loader: 'css-loader' }
                     ]
                 },
+                {
+                    test: /\.md$/,
+                    use: [
+                        { loader: 'html-loader', options: { esModule: false } },
+                        { loader: 'markdown-it-loader' }
+                    ],
+                },
             ],
         },
     };
