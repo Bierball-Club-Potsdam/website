@@ -6,3 +6,6 @@ trim_trailing_whitespace = true
 
 [*.pug]
 trim_trailing_whitespace = false
+
+[*.yml]
+indent_size = 2
