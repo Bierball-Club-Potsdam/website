@@ -1,9 +1,11 @@
 const items = [...document.getElementsByClassName("collapsible")];
 items.forEach((item) => {
-    const heading = item.getElementsByClassName("collapsible-heading")[0];
-    const content = item.getElementsByClassName("collapsible-content")[0];
+    const toggle = [...item.children];
     item.onclick = () => {
-        heading.classList.toggle('d-none');
-        content.classList.toggle('d-none');
+        toggle.forEach((t) => {
+            t.classList.toggle('d-none');
+            t.classList.toggle('d-inline');
+        });
     };
+    toggle[toggle.length - 1].children[0].classList.add('d-inline');
 });

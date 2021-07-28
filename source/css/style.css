@@ -14,6 +14,7 @@ body {
     margin-bottom: 1em;
     background-color: var(--background);
     color: var(--text);
+    overflow-y: scroll;
 }
 
 a:visited {
@@ -35,4 +36,22 @@ h1, h2, h3, h4, h5, h6 {
 
 .d-none {
     display: none;
+}
+
+.d-inline {
+    display: inline;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.collapsible h1 {
+    cursor: pointer;
+}
+
+.toggle {
+    min-width: 2ch;
+    width: 2ch;
+    margin-block: 0px;
 }

@@ -1,5 +1,9 @@
 mixin collapsible(heading, content)
     div.collapsible
-        h1.collapsible-heading #{heading}
-        div.collapsible-content.d-none
+        span.d-inline
+            h1.d-inline-block.toggle +
+        span.d-none
+            h1.d-inline-block.toggle -
+        h1.d-inline #{heading}
+        div.d-none
             block
