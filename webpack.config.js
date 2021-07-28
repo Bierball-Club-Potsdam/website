@@ -19,7 +19,15 @@ module.exports = function (env) {
                 {
                     test: /\.pug$/,
                     use: { loader: 'pug-loader' },
-                }
+                },
+                {
+                    test: /\.css$/,
+                    type: 'asset/resource',
+                    use: [
+                        { loader: 'extract-loader' },
+                        { loader: 'css-loader' }
+                    ]
+                },
             ],
         },
     };

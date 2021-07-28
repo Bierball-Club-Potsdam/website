@@ -1,0 +1,28 @@
+:root {
+    --background: #ddd;
+    --text: #111;
+    --heading: #333;
+    --link: #337;
+    --visited-link: #337;
+}
+
+body {
+    font-family: sans-serif;
+    max-width: 50em;
+    margin: auto;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+a:visited {
+    color: var(--visited-link);
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
