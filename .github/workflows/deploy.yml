@@ -38,6 +38,8 @@ jobs:
         working-directory: deploy
       - name: Commit result
         run: |
+          pwd
+          ls -a
           git config user.email "${{ github.event.pusher.email }}"
           git config user.name "${{ github.event.pusher.name }}"
           git add *
