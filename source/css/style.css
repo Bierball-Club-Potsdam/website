@@ -18,8 +18,8 @@ body {
     font-family: 'Roboto';
     max-width: 50em;
     margin: auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 4em;
+    margin-bottom: 4em;
     background-color: var(--background);
     color: var(--text);
     overflow-y: scroll;
@@ -58,8 +58,12 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
 }
 
+.collapsible {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
 .toggle {
     min-width: 2ch;
-    width: 2ch;
     margin-block: 0px;
 }
