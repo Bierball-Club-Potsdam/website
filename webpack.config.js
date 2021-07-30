@@ -4,6 +4,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 const config = require('./config.json');
 
@@ -59,6 +60,12 @@ module.exports = function (env) {
             alias: {
                 fonts: path.resolve(__dirname, 'source/fonts/min')
             }
+        },
+        optimization: {
+            minimizer: [
+                `...`,
+                new CssMinimizerPlugin(),
+            ],
         }
     };
 }
