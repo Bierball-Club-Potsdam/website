@@ -1,3 +1,6 @@
 [submodule "source/docs"]
 	path = source/docs
 	url = https://github.com/Bierball-Club-Potsdam/docs.git
+[submodule "source/fonts/roboto"]
+	path = source/fonts/roboto
+	url = https://github.com/googlefonts/roboto.git
