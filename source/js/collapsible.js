@@ -41,3 +41,5 @@ class Collapsible {
 
 const items = [...document.getElementsByClassName("collapsible")]
     .map((i) => new Collapsible(i));
+
+items[0].show(true);
