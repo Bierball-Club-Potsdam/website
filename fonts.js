@@ -9,6 +9,7 @@ const blocks = [
     [0x0080, 0x00ff], // latin-1 supplement
     [0x0100, 0x017f], // latin extended-a
     [0x0180, 0x024f], // latin extended-b
+    [0x2000, 0x206f], // general punctuation
 ];
 
 const chars = blocks
