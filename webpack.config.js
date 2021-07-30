@@ -1,13 +1,21 @@
 'use strict';
 
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 
 const config = require('./config.json');
 
 module.exports = function (env) {
     return {
+        output: {
+            path: path.resolve(__dirname, 'dist'),
+            clean: true
+        },
         entry: {
-            collapsible: "./source/js/collapsible.js"
+            collapsible: "./source/js/collapsible.js",
+            style: "./source/css/style.css"
         },
         plugins: [
             new HtmlWebpackPlugin({
@@ -15,6 +23,8 @@ module.exports = function (env) {
                 template: './source/index.pug',
                 templateParameters: { config }
             }),
+            new MiniCssExtractPlugin(),
+            new RemoveEmptyScriptsPlugin()
         ],
         module: {
             rules: [
@@ -24,11 +34,17 @@ module.exports = function (env) {
                 },
                 {
                     test: /\.css$/,
-                    type: 'asset/resource',
                     use: [
-                        { loader: 'extract-loader' },
+                        MiniCssExtractPlugin.loader,
                         { loader: 'css-loader' }
                     ]
+                },
+                {
+                    test: /\.(|eot|ttf|woff|woff2)$/,
+                    type: 'asset/resource',
+                    generator: {
+                        filename: 'fonts/[name][ext][query]'
+                    }
                 },
                 {
                     test: /\.md$/,
@@ -39,5 +55,10 @@ module.exports = function (env) {
                 },
             ],
         },
+        resolve: {
+            alias: {
+                fonts: path.resolve(__dirname, 'source/fonts/min')
+            }
+        }
     };
 }

@@ -6,8 +6,16 @@
     --visited-link: #337;
 }
 
+@font-face {
+    font-family: 'Roboto';
+    src: url(~fonts/Roboto-Regular.eot) format('eot');
+    src: url(~fonts/Roboto-Regular.ttf) format('ttf');
+    src: url(~fonts/Roboto-Regular.woff) format('woff');
+    src: url(~fonts/Roboto-Regular.woff2) format('woff2');
+}
+
 body {
-    font-family: sans-serif;
+    font-family: 'Roboto';
     max-width: 50em;
     margin: auto;
     margin-top: 1em;
