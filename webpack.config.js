@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const config = require('./config.json');
 
@@ -25,7 +26,8 @@ module.exports = function (env) {
                 templateParameters: { config }
             }),
             new MiniCssExtractPlugin(),
-            new RemoveEmptyScriptsPlugin()
+            new RemoveEmptyScriptsPlugin(),
+            new FaviconsWebpackPlugin('./source/graphics/logo/minimal/logo.svg')
         ],
         module: {
             rules: [
