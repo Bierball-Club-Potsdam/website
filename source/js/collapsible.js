@@ -3,24 +3,27 @@ class Collapsible {
         this.visible = false;
 
         const children = [...item.children];
-        this.clickable = children.slice(0, -1);
 
         const content = children.slice(-1)[0];
         const contentHead = content.children[0];
-        contentHead.classList.add('d-inline');
+        content.removeChild(contentHead);
 
-        this.clickable.push(contentHead);
-        this.folded = this.clickable.filter((_, i) => i % 2 === 0);
-        this.unfolded = [this.clickable[1], content];
+        const plus = children[0];
+        const minus = children[1];
+        this.folded = [plus];
+        this.unfolded = [minus, content];
 
-        this.clickable.forEach((c) => c.onclick = () => {
+        const clickable = children.slice(0, -1);
+        clickable.forEach((c) => c.onclick = () => {
             this.toggle();
             items.filter((i) => i !== this).forEach((i) => i.show(false));
         });
     }
 
     show(visible) {
+        if (this.visible === visible) return;
         this.visible = visible;
+
         const show = visible ? this.unfolded : this.folded;
         const hide = visible ? this.folded : this.unfolded;
 
