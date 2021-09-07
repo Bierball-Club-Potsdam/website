@@ -4,3 +4,6 @@
 [submodule "source/fonts/roboto"]
 	path = source/fonts/roboto
 	url = https://github.com/googlefonts/roboto.git
+[submodule "source/graphics"]
+	path = source/graphics
+	url = https://github.com/Bierball-Club-Potsdam/graphics
