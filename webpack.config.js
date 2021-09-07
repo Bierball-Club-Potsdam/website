@@ -50,6 +50,13 @@ module.exports = function (env) {
                     }
                 },
                 {
+                    test: /\.svg$/,
+                    type: 'asset/resource',
+                    generator: {
+                        filename: 'img/[name][ext][query]'
+                    }
+                },
+                {
                     test: /\.md$/,
                     use: [
                         { loader: 'html-loader', options: { esModule: false } },
