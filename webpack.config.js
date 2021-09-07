@@ -14,7 +14,7 @@ module.exports = function (env, argv) {
 
     const output = {
         path: path.resolve(__dirname, 'dist'),
-        clean: true
+        clean: production
     };
 
     const entry = {
