@@ -2,7 +2,7 @@
 
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
@@ -18,8 +18,9 @@ module.exports = function (env, argv) {
     };
 
     const entry = {
-        collapsible: "./source/js/collapsible.js",
-        style: "./source/css/style.css"
+        collapsible: './source/js/collapsible.js',
+        style: './source/css/style.css',
+        mail: './source/js/mail.js'
     };
 
     const plugins = [

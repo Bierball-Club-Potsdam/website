@@ -1,9 +1,12 @@
 :root {
     --background: #eee;
     --text: #111;
+    --footer-text: #555;
     --heading: #333;
     --link: #337;
     --visited-link: #337;
+    --body-margin: 4em;
+    --inner-margin: 1em;
 }
 
 @font-face {
@@ -18,8 +21,8 @@ body {
     font-family: 'Roboto';
     max-width: 50em;
     margin: auto;
-    margin-top: 4em;
-    margin-bottom: 4em;
+    margin-top: var(--body-margin);
+    margin-bottom: var(--body-margin);
     background-color: var(--background);
     color: var(--text);
     overflow-y: scroll;
@@ -59,8 +62,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .collapsible {
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin: var(--inner-margin) 0;
 }
 
 .toggle {
@@ -87,12 +89,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .content {
-    margin: 10px;
+    margin: var(--inner-margin);
     flex-grow: 1;
 }
 
 .footer {
-    margin: 10px;
-    margin-bottom: 0;
-    padding-bottom: 10px;
+    margin: 0 var(--inner-margin);
+    padding-bottom: var(--inner-margin);
+    font-size: small;
+    color: var(--footer-text);
+}
+
+.footer div {
+    padding-top: var(--inner-margin);
 }

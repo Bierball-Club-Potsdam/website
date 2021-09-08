@@ -22,5 +22,6 @@ html(lang="de")
                 div.section
                     +collapsible("Vereinssatzung")
                         !=require("./docs/Satzung.md")
-            div.footer Das Kleingedruckte
+            div.footer
+                include ./partials/footer.pug
 
