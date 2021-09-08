@@ -101,12 +101,17 @@ module.exports = function (env, argv) {
         ],
     };
 
+    const devServer = {
+        hot: false
+    }
+
     return {
         output,
         entry,
         plugins,
         module,
         resolve,
-        optimization
+        optimization,
+        devServer
     };
 }
