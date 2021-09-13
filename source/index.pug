@@ -6,17 +6,22 @@ html(lang="de")
         meta(charset="UTF-8")
         meta(name = 'keywords', content = `${config.title}, ${config.short}`)
     body
-        div.section
-            img(src=require("./graphics/logo/fullName/logo_textAsPath.svg"), alt="Logo").logo
-            h1 #{config.title}
-            p Der #{config.title} ist ein Bierballclub aus Potsdam. Unser Ziel ist es, Bierball vom Stigma eines Trinkspiels zu befreien und stattdessen als professioniellen Mannschaftssport zu etablieren.
-            p Der Verein befindet sich zurzeit noch im Aufbau. Informationen zum Erwerb einer Mitgliedschaft und geplanten Veranstaltungen werden hier zu gegebener Zeit veröffentlicht.
-        div.section
-            +collapsible("Vereinfachte Spielregeln")
-                !=require("./docs/Spielregeln_kurz.md")
-        div.section
-            +collapsible("Spielregeln")
-                !=require("./docs/Spielregeln.md")
-        div.section
-            +collapsible("Vereinssatzung")
-                !=require("./docs/Satzung.md")
+        div.container
+            div.content
+                div.section
+                    img(src=require("./graphics/logo/fullName/logo_textAsPath.svg"), alt="Logo").logo
+                    h1 #{config.title}
+                    p Der #{config.title} ist ein Bierballclub aus Potsdam. Unser Ziel ist es, Bierball vom Stigma eines Trinkspiels zu befreien und stattdessen als professioniellen Mannschaftssport zu etablieren.
+                    p Der Verein befindet sich zurzeit noch im Aufbau. Informationen zum Erwerb einer Mitgliedschaft und geplanten Veranstaltungen werden hier zu gegebener Zeit veröffentlicht.
+                div.section
+                    +collapsible("Vereinfachte Spielregeln")
+                        !=require("./docs/Spielregeln_kurz.md")
+                div.section
+                    +collapsible("Spielregeln")
+                        !=require("./docs/Spielregeln.md")
+                div.section
+                    +collapsible("Vereinssatzung")
+                        !=require("./docs/Satzung.md")
+            div.footer
+                include ./partials/footer.pug
+
