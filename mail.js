@@ -1,0 +1,1 @@
+(()=>{function e(e,n){const o=document.createElement("a");o.href=`mailto:${e}@${n}`,o.click()}window.mail={show:function(n,o,t){const c=document.getElementById(t);c.innerHTML=n+"[at]"+o,c.onmouseover=void 0,setTimeout((()=>{c.onclick=()=>e(n,o)}),100)},send:e}})();
