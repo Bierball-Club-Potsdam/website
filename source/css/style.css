@@ -5,8 +5,9 @@
     --heading: #333;
     --link: #337;
     --visited-link: #337;
-    --body-margin: 4em;
-    --inner-margin: 1em;
+    --body-margin: 2em;
+    --content-margin-vertical: 1em;
+    --content-margin-horizontal: 2em;
 }
 
 @font-face {
@@ -19,7 +20,7 @@
 
 body {
     font-family: 'Roboto';
-    max-width: 50em;
+    max-width: 60em;
     margin: auto;
     margin-top: var(--body-margin);
     margin-bottom: var(--body-margin);
@@ -45,6 +46,10 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--heading);
 }
 
+h1 {
+    font-size: 1.5em;
+}
+
 .d-none {
     display: none;
 }
@@ -62,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .collapsible {
-    margin: var(--inner-margin) 0;
+    margin: var(--content-margin-vertical) 0;
 }
 
 .toggle {
@@ -89,17 +94,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .content {
-    margin: var(--inner-margin);
+    margin: var(--content-margin-vertical) var(--content-margin-horizontal);
     flex-grow: 1;
 }
 
 .footer {
-    margin: 0 var(--inner-margin);
-    padding-bottom: var(--inner-margin);
+    margin: 0 var(--content-margin-horizontal);
+    padding-bottom: var(--content-margin-vertical);
     font-size: small;
     color: var(--footer-text);
 }
 
 .footer div {
-    padding-top: var(--inner-margin);
+    padding-top: var(--content-margin-vertical);
 }
