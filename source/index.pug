@@ -1,28 +1,17 @@
+extends partials/base.pug
 include partials/collapsible.pug
 
-html(lang="de")
-    head
-        title #{config.short}
-        meta(charset="UTF-8")
-        meta(name="keywords", content=`${config.title}, ${config.short}`)
-        meta(name="viewport", content="width=device-width, initial-scale=1")
-    body
-        div.container
-            div.content
-                div.section
-                    img(src=require("./graphics/logo/fullName/logo_textAsPath.svg"), alt="Logo").logo
-                    h1 #{config.title}
-                    p Der #{config.title} ist ein Bierballclub aus Potsdam. Unser Ziel ist es, Bierball vom Stigma eines Trinkspiels zu befreien und stattdessen als professioniellen Mannschaftssport zu etablieren.
-                    p Der Verein befindet sich zurzeit noch im Aufbau. Informationen zum Erwerb einer Mitgliedschaft und geplanten Veranstaltungen werden hier zu gegebener Zeit veröffentlicht.
-                div.section
-                    +collapsible("Vereinfachte Spielregeln")
-                        !=require("./docs/Spielregeln_kurz.md")
-                div.section
-                    +collapsible("Spielregeln")
-                        !=require("./docs/Spielregeln.md")
-                div.section
-                    +collapsible("Vereinssatzung")
-                        !=require("./docs/Satzung.md")
-            div.footer
-                include ./partials/footer.pug
-
+block content
+    div.section
+        h1 #{config.title}
+        p Der #{config.title} ist ein Bierballclub aus Potsdam. Unser Ziel ist es, Bierball vom Stigma eines Trinkspiels zu befreien und stattdessen als professioniellen Mannschaftssport zu etablieren.
+        p Der Verein befindet sich zurzeit noch im Aufbau. Informationen zum Erwerb einer Mitgliedschaft und geplanten Veranstaltungen werden hier zu gegebener Zeit veröffentlicht.
+    div.section
+        +collapsible("Vereinfachte Spielregeln")
+            !=require("./docs/Spielregeln_kurz.md")
+    div.section
+        +collapsible("Spielregeln")
+            !=require("./docs/Spielregeln.md")
+    div.section
+        +collapsible("Vereinssatzung")
+            !=require("./docs/Satzung.md")

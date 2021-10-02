@@ -1,5 +1,6 @@
 'use strict';
 
+const fs = require('fs');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -23,12 +24,17 @@ module.exports = function (env, argv) {
         mail: './source/js/mail.js'
     };
 
+    const pages = fs.readdirSync('./source', { withFileTypes: true })
+        .filter((e) => e.isFile() && path.extname(e.name) === '.pug')
+        .map((e) => path.basename(e.name, '.pug'));
+
     const plugins = [
-        new HtmlWebpackPlugin({
-            filename: 'index.html',
-            template: './source/index.pug',
-            templateParameters: { config }
-        }),
+        ...pages.map((p) =>
+            new HtmlWebpackPlugin({
+                filename: `${p}.html`,
+                template: `./source/${p}.pug`,
+                templateParameters: { config }
+            })),
         new FaviconsWebpackPlugin('./source/graphics/logo/minimal/logo.svg')
     ];
 

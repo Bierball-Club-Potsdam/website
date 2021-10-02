@@ -101,10 +101,17 @@ h1 {
 .footer {
     margin: 0 var(--content-margin-horizontal);
     padding-bottom: var(--content-margin-vertical);
-    font-size: small;
     color: var(--footer-text);
+}
+
+.footer * {
+    font-size: small;
 }
 
 .footer div {
     padding-top: var(--content-margin-vertical);
+}
+
+.footer a {
+    margin-left: 1em
 }

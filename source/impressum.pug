@@ -1,0 +1,26 @@
+extends partials/base.pug
+
+block content
+    div
+        h1 Privatsphäre
+        | Diese Website erhebt keine Personenbezogen Daten und verwendet keine Cookies &ndash; 
+        a(href="https://github.com/Bierball-Club-Potsdam/website") Link zum Quelltext
+        | .
+        br
+        | Wir nutzen GitHub Pages zum Hosten der Webseite &ndash; 
+        a(href="https://docs.github.com/en/github/site-policy/github-privacy-statement#github-pages") Link zum Privacy Statement
+        | .
+    div
+        h1 Privacy Statement
+        | This website does not collect personal information or use cookies &ndash; 
+        a(href="https://github.com/Bierball-Club-Potsdam/website") link to source code
+        | .
+        br
+        | We use GitHub Pages for hosting &ndash; 
+        a(href="https://docs.github.com/en/github/site-policy/github-privacy-statement#github-pages") link to privacy statement
+        | .
+    div
+        h1 Impressum
+        | Kontakt / Contact: 
+        - const mail = "mail.show('admin', 'bierball.club', 'mail')";
+        a(id='mail', onmouseover=mail) [Berühren zum Anzeigen / hover to show]
