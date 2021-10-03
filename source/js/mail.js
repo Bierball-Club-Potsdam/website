@@ -11,6 +11,12 @@ function show(user, domain, id) {
     }, 100);
 }
 
+function showPhone(num, id) {
+    const elem = document.getElementById(id);
+    elem.innerHTML = num;
+    elem.onmouseover = undefined;
+}
+
 function send(user, domain) {
     const a = document.createElement('a');
     a.href = `mailto:${user}@${domain}`;
@@ -19,5 +25,6 @@ function send(user, domain) {
 
 window.mail = {
     show,
+    showPhone,
     send
 }
