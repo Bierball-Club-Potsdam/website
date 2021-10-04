@@ -6,11 +6,11 @@ block content
         h1 #{config.title}
         p Der #{config.title} ist ein Bierballclub aus Potsdam. Unser Ziel ist es, Bierball vom Stigma eines Trinkspiels zu befreien und stattdessen als professioniellen Mannschaftssport zu etablieren.
 
-        div Für Informationen zum Verein oder zum Erwerb einer Mitgliedschaft könnt ihr uns gerne unter folgendener E-Mail-Adresse kontaktieren: 
         - const mail = "mail.show('kontakt', 'bierball.club', 'mail')";
-        a(id='mail', onmouseover=mail) [Berühren zum Anzeigen / hover to show]
-		
-        p Falls ihr nicht aus Potsdam seid, aber trotzdem einem Bierballverein (oder Flunky-Ball-Verein) angehören wollt, gründet doch einfach euren eigenen. Ihr braucht lediglich sieben Gründungsmitglieder und ca 100 € für die Eintragung. Wenn ihr dabei Hilfe braucht, könnt ihr uns gerne unter der oben angegebenen E-Mail-Adresse kontaktieren.
+        div Für Informationen zum Verein oder zum Erwerb einer Mitgliedschaft könnt ihr uns gerne unter folgendener E-Mail-Adresse kontaktieren: 
+            a(id='mail', onmouseover=mail) [Berühren zum Anzeigen / hover to show]
+
+        p Falls ihr nicht aus Potsdam seid, aber trotzdem einem Bierballverein (oder Flunky-Ball-Verein) angehören wollt, gründet doch einfach euren eigenen. Ihr braucht lediglich sieben Gründungsmitglieder und ca. 100&thinsp;€ für die Eintragung. Wenn ihr dabei Hilfe braucht, könnt ihr uns gerne unter der oben angegebenen E-Mail-Adresse kontaktieren.
 
     div.section
         +collapsible("Vereinfachte Spielregeln")

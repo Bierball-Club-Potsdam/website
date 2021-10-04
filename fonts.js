@@ -10,6 +10,7 @@ const blocks = [
     [0x0100, 0x017f], // latin extended-a
     [0x0180, 0x024f], // latin extended-b
     [0x2000, 0x206f], // general punctuation
+    [0x20a0, 0x20cf], // currency symbols
 ];
 
 const chars = blocks
